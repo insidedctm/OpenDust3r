@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+# Upgrade the conda install
+conda install -n base -c defaults python=3.11 conda=25.3.1
+
 # Activate conda and install habitat-sim with the specified options
 #RUN conda install -y -c conda-forge -c aihabitat habitat-sim=*=*bullet*headless*
 
