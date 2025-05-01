@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Activate conda and install habitat-sim with the specified options
-RUN conda install -y -c conda-forge -c aihabitat habitat-sim=*=*bullet*headless*
+#RUN conda install -y -c conda-forge -c aihabitat habitat-sim=*=*bullet*headless*
 
 # Optional: verify installation
-RUN python -c "import habitat_sim; print('Habitat-Sim installed:', habitat_sim.__version__)"
+#RUN python -c "import habitat_sim; print('Habitat-Sim installed:', habitat_sim.__version__)"
 
 # Default command (optional)
 CMD ["/bin/bash"]
